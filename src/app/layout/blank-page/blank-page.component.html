@@ -1,0 +1,28 @@
+<div class='table-responsive'>
+    <table class='table table-bordered table-sm '>
+      <thead class="thead-dark">
+        <tr>
+          <th>Name</th>
+          <th>Mail</th>
+          <th>Skills</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees; let i=index">
+          <td>{{employee.name}}</td>
+          <td>{{employee.email}}</td>
+          <td>
+            <table class='table table-sm '>
+              <tbody>
+                <tr *ngFor="let skill of employee.skills;">
+                  <td>{{skill.skill}}</td>
+                  <td>{{skill.exp}}</td>
+                </tr>
+              </tbody>
+            </table>
+ 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
